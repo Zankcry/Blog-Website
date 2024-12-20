@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    background-color: #000000;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+ul li{
+    display: inline-block;
+    position: relative;
+}
+
+ul li a{
+    display: block;
+    padding: 20px 25px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    background: #1a1e21;
+    position: absolute;
+    z-index: 999;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-2px);
+    transition: all 0.5s ease;
+}
+
+ul li a:hover {
+    color: #f33c3c;
+    background: none;
+}
+
+ul li ul.dropdown li a:hover {
+    color: #f33c3c;
+    background: none;
+}
+
+ul li ul.dropdown li {
+    width: 100%;
+}
+
+ul li:hover ul.dropdown {
+    max-height: 500px;
+    opacity: 1;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins';
+    background-color: #131313;
+}
+
+/*-- Blog --*/
+#blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.blog-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blog-heading span{
+    color: #53fff9;
+}
+
+.blog-heading h3{
+    font-size: 2.4rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.blog-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 20px;
+    flex-wrap: wrap;
+}
+
+.blog-box{
+    width: 450px;
+    background-color: #000000;
+    margin: 20px;
+}
+
+.blog-img{
+    width: 100%;
+    height: auto;
+}
+
+.blog-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blog-text{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-text span{
+    color: #53fff9;
+    font-size: 0.9rem;
+}
+
+.blog-text .blog-title{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.blog-text .blog-title:hover{
+    color: #f33c3c;
+    transition: all ease 0.3s;
+}
+
+.blog-text p{
+    color: #9b9b9b;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: horizontal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+
+.blog-text a{
+    color: #53fff9;   
+}
+
+.blog-text a:hover{
+    color: #f33c3c;
+    transition: all ease 0.3s;
+}
+
+/* Footer */
+
+.footer-bottom{
+    background: #000000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    padding: 12px 0;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+    color: #53fff9;
+}
+
+@media screen and (max-width: 768px) {
+    .blog-container {
+        margin: 10px 10px;
+    }
+
+    .blog-box {
+        width: 100%;
+        max-width: 550px;
+        margin: 15px 10px;
+    }
+
+    .blog-heading h3 {
+        font-size: 2rem;
+    }
+
+    nav ul li a {
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        position: relative;
+    }
+
+    nav ul {
+        width: 100%;
+    }
+
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        font-size: 16px;
+    }
+
+    ul li ul.dropdown {
+        position: static;
+        width: 100%;
+        background: #2a2e31;
+    }
+
+    .blog-heading h3 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    .blog-box {
+        margin: 15px 0;
+    }
+
+    .blog-text {
+        padding: 20px;
+    }
+
+    .blog-text .blog-title {
+        font-size: 1.1rem;
+    }
+
+    .blog-text p {
+        font-size: 0.85rem;
+        margin: 15px 0px;
+    }
+
+    #blog {
+        padding: 20px;
+    }
+
+    .footer-bottom {
+        padding: 15px 10px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .blog-heading h3 {
+        font-size: 1.4rem;
+    }
+
+    .blog-text {
+        padding: 15px;
+    }
+
+    .blog-text .blog-title {
+        font-size: 1rem;
+    }
+
+    nav ul li a {
+        padding: 12px;
+        font-size: 14px;
+    }
+}
