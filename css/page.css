@@ -231,6 +231,22 @@ section{
     color: #53fff9;
 }
 
+.image-attribution {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+.image-attribution a {
+    color: #f33c3c;
+    transition: color 0.3s ease;
+}
+
+.image-attribution a:hover {
+    color: #d32f2f;
+}
+
 @media screen and (max-width: 768px) {
     /* Navigation */
     nav ul li a {
@@ -264,6 +280,10 @@ section{
 
     .post-content {
         margin-top: 13rem;
+    }
+
+    .post-content2{
+        margin-top: 16rem;
     }
 
     .sub-heading {
@@ -323,6 +343,10 @@ section{
 
     .post-content {
         margin-top: 12rem;
+    }
+
+    .post-content2{
+        margin-top: 14.5rem;
     }
 
     .post-text {
